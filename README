@@ -7,6 +7,6 @@ pause
 
 
 ```sql
-CREATE ALIAS IF NOT EXISTS H2_MATH FOR " org.noise_planet.h2math.MathExtension.load";
+CREATE ALIAS IF NOT EXISTS H2_MATH FOR "org.noise_planet.h2math.MathExtension.load";
 CALL H2_MATH();
 ```
