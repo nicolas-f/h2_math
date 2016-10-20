@@ -1,0 +1,2 @@
+include 'h2_math_core'
+include 'h2_math_osgi'
