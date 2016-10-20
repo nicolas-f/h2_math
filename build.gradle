@@ -1,5 +1,18 @@
 apply plugin: 'java'
 
+group "org.noise_planet"
+version "1.0-SNAPSHOT"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.dm.gradle:gradle-bundle-plugin:0.8.6'
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -25,4 +38,15 @@ test {
     afterTest { desc, result ->
         println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
     }
+}
+
+
+apply plugin: 'org.dm.bundle'
+
+bundle {
+    instructions << [
+            'Import-Package': '!org.h2.command.ddl,!org.h2.engine,!org.h2.message,!org.h2.index,!org.h2.table,!org.h2.result,*'
+    ]
+    instruction 'Export-Package', 'org.noise_planet.h2math'
+    instruction 'Fragment-Host', 'org.h2'
 }
