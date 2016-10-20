@@ -1,0 +1,12 @@
+Along H2GIS dist folder create a bat file
+
+```bat
+java -jar h2_math.jar
+pause
+```
+
+
+```sql
+CREATE ALIAS IF NOT EXISTS H2_MATH FOR " org.noise_planet.h2math.MathExtension.load";
+CALL H2_MATH();
+```
