@@ -19,3 +19,5 @@ commons-math3-3.6.1.jar from http://search.maven.org/remotecontent?filepath=org/
 h2_math_core-1.0-SNAPSHOT.jar
 h2_math_osgi-1.0-SNAPSHOT.jar
 
+This package is available here:
+https://github.com/nicolas-f/h2_math/releases
